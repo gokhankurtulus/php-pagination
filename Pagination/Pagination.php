@@ -5,12 +5,12 @@ class Pagination
 {
 
     /**
-     * @param int $currentIndex current page number
-     * @param int $itemsPerPage how many items showing per page
-     * @param int $totalItems total items
-     * @param int $maxPageOneTime how many list item you want to see
-     * @param string $link links for page numbers
-     * @return string       returns list
+     * @param int $currentIndex         current page number
+     * @param int $itemsPerPage         how many items showing per page
+     * @param int $totalItems           total items
+     * @param int $maxPaginationItems   how many list item you want to see
+     * @param string $link              links for page numbers
+     * @return string                   returns list
      */
     public static function paginate(int $currentIndex, int $itemsPerPage, int $totalItems, int $maxPaginationItems, string $link)
     {
@@ -24,7 +24,7 @@ class Pagination
             $currentIndex = $lastPage;
 
         if ($maxPaginationItems > $lastPage) { // Page list can't be bigger than maximum page and check do we need prev and next links
-            $maxPageOneTime = $lastPage;
+            $maxPaginationItems = $lastPage;
             $prevAndNext = false;
         } else
             $prevAndNext = true;
