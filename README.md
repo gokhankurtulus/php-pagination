@@ -8,6 +8,7 @@ It won't get items from Database or something else, you need to get those values
 </p>
 <p>paginate function returns the list of pages you need.</p>
 <p> Check values before pass the function to prevent fatal errors.</p>
+<p> Try to keep $maxPaginationItems in odd numbers to center items properly. </p>
 <h3>Simple usage</h3>
 <pre>
 use Pagination\Pagination;
